@@ -56,22 +56,25 @@ export default function App() {
         ))}
       </div>
       <hr />
-      <div>
-        {bookDatabase[selectedGenre].map((book) => (
-          <li
-            key={book.name}
-            style={{
-              listStyle: "none",
-              padding: "0.5rem",
-              border: "1px solid",
-              margin: "1rem",
-              borderRadius: "0.5rem"
-            }}
-          >
-            <div> {book.name} </div>
-            <div> {book.rating} </div>
-          </li>
-        ))}
+      <div style={{ textAlign: "left" }}>
+        <ul style={{ paddingInlineStart: "0" }}>
+          {bookDatabase[selectedGenre].map((book) => (
+            <li
+              key={book.name}
+              style={{
+                listStyle: "none",
+                padding: "1rem",
+                border: "1px solid",
+                width: "20%",
+                margin: "1rem",
+                borderRadius: "0.5rem"
+              }}
+            >
+              <div> {book.name} </div>
+              <div> {book.rating} </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
